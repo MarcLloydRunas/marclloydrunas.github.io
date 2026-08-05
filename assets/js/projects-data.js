@@ -48,13 +48,13 @@ const PROJECTS = [
   {
     id: "landslide-km",
     name: "Landslide Knowledge Management System",
-    status: "off",
+    status: "Live",
     statusLabel: "Live",
     summary: "An online library and knowledge base for landslide-related research and materials.",
     detail: "Built for landslidekm.dostcar.ph as a searchable digital library of landslide-related reports, research, and historical records. The live site is temporarily inaccessible — screenshots and a walkthrough video are available on request in the meantime.",
     stack: ["PHP", "MySQL"],
     link: "https://landslidekm.dostcar.ph",
-    linkLabel: null
+    linkLabel: Visit site
   },
   {
     id: "ai-video",
