@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marc Lloyd — Full-Stack Systems Developer</title>
+<meta name="description" content="Marc Lloyd builds monitoring, CRM, and management systems with PHP, MySQL, Node.js, React, and WordPress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span>MARC.LLOYD</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO — boot / status readout ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="panel bootpanel">
+        <div class="panel-head">
+          <span>whoami.log</span>
+          <div class="dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="boot-body">
+          <p class="boot-line"><span class="prompt">$</span> whoami</p>
+          <h1>Marc Lloyd</h1>
+          <p class="role">Full-Stack Developer — Systems &amp; Monitoring Platforms</p>
+
+          <div class="readout">
+            <div class="row"><span class="k">STACK</span><span class="v">PHP · MySQL · Node.js · React/Next.js · WordPress</span></div>
+            <div class="row"><span class="k">BASE</span><span class="v">Philippines (remote-first)</span></div>
+            <div class="row"><span class="k">FOCUS</span><span class="v">System &amp; application development</span></div>
+            <div class="row"><span class="k">STATUS</span><span class="v"><span class="status live">Available for projects</span></span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="btn primary">View projects →</a>
+            <a href="contact.html" class="btn">Get in touch</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-note">Most of what I build monitors, tracks, or manages something — air quality sensors, ICT inventories, streamer performance. This site is styled the same way.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURED PROJECTS ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Featured systems</h2>
+        <p>A sample of recent builds. Full list, tech breakdowns, and case studies on the Projects page.</p>
+      </div>
+
+      <div class="grid" id="featured-grid"></div>
+
+      <div style="margin-top:28px;">
+        <a href="projects.html" class="btn">See all projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT I WORK WITH ===================== -->
+  <section class="section stack-section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Toolchain</h2>
+        <p>The stack I actually ship with — not a keyword list.</p>
+      </div>
+      <div class="panel stackpanel">
+        <div class="panel-head"><span>stack.config</span><div class="dots"><span></span><span></span><span></span></div></div>
+        <div class="stack-grid">
+          <div class="stack-group">
+            <span class="tag">Backend</span>
+            <p>PHP, MySQL, Node.js</p>
+          </div>
+          <div class="stack-group">
+            <span class="tag">Frontend</span>
+            <p>React, Next.js, JavaScript</p>
+          </div>
+          <div class="stack-group">
+            <span class="tag">CMS</span>
+            <p>WordPress, GoHighLevel (Flipping Pro CRM)</p>
+          </div>
+          <div class="stack-group">
+            <span class="tag">Infra</span>
+            <p>Hostinger, deployment &amp; hosting management</p>
+          </div>
+          <div class="stack-group">
+            <span class="tag">Other</span>
+            <p>AI-assisted video &amp; image production tooling</p>
+          </div>
+          <div class="stack-group">
+            <span class="tag">Domain</span>
+            <p>Government monitoring &amp; reporting systems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Marc Lloyd</span>
+    <span>Built with static HTML — hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="assets/js/projects-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

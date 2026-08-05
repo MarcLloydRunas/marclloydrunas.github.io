@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Marc Lloyd</title>
+<meta name="description" content="Case studies and live systems built by Marc Lloyd: monitoring platforms, CRM integrations, and management systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/projects.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span>MARC.LLOYD</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlinks">MENU</button>
+  </div>
+</header>
+
+<main>
+  <section class="wrap projects-intro">
+    <span class="tag">// project_registry</span>
+    <h1>Projects</h1>
+    <p>Six systems, six different states — some live in production, some restricted to internal government use, one temporarily offline. Status reflects what's true right now, not a marketing gloss.</p>
+
+    <div class="legend">
+      <span class="status live">Live</span>
+      <span class="status dev">In development</span>
+      <span class="status case">Case study</span>
+      <span class="status off">Offline</span>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div id="projects-grid"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Marc Lloyd</span>
+    <span>Built with static HTML — hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="assets/js/projects-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
