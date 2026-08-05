@@ -54,7 +54,7 @@ const PROJECTS = [
     detail: "Built for landslidekm.dostcar.ph as a searchable digital library of landslide-related reports, research, and historical records. The live site is temporarily inaccessible — screenshots and a walkthrough video are available on request in the meantime.",
     stack: ["PHP", "MySQL"],
     link: "https://landslidekm.dostcar.ph",
-    linkLabel: Visit site
+    linkLabel: "Visit site"
   },
   {
     id: "ai-video",
