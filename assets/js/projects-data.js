@@ -10,7 +10,7 @@ const PROJECTS = [
     status: "live",
     statusLabel: "Live",
     summary: "WordPress business site for a Texas real-estate investment company, with CRM and analytics integration.",
-    detail: "Built and maintain a WordPress-based business website live at txdistressedhomebuyers.com. Integrated Flipping Pro CRM for lead capture and management, and Google Analytics for traffic and performance tracking. Configured hosting on Hostinger and manage plugins for site security and SEO optimization.",
+    detail: "A WordPress-based business site for a real-estate investment company, built and maintained end to end — from initial setup through ongoing security and SEO upkeep. Flipping Pro CRM handles lead capture so inquiries flow straight into the client's pipeline instead of sitting in an inbox, while Google Analytics tracks where traffic is actually coming from. Hosting runs on Hostinger, with security plugins and SEO configuration managed on an ongoing basis rather than a one-time setup.",
     stack: ["WordPress", "Hostinger", "Flipping Pro CRM", "Google Analytics", "SEO plugins"],
     link: "https://txdistressedhomebuyers.com",
     linkLabel: "Visit site",
@@ -23,7 +23,7 @@ const PROJECTS = [
     status: "case",
     statusLabel: "Ongoing",
     summary: "Pixar-style 3D animated short films produced end-to-end with AI generation tools.",
-    detail: "Independently produce short-form, Pixar-style 3D animated videos, managing each project from concept through final edit. Designed and manage an end-to-end AI-generation production pipeline: character/asset reference images, per-shot start frames, and final video clips generated with Veo 3.1 Fast. Produce narration and voice work with ElevenLabs, and handle final assembly and editing. Established a production standard requiring fully self-contained, explicit AI generation prompts for consistent, reliable output across scenes.",
+    detail: "A self-directed animation studio of one — short-form, Pixar-style 3D films taken from concept to finished video without an external production team. The pipeline runs character and asset reference generation first, then per-shot start frames, then final clips rendered with Veo 3.1 Fast, with ElevenLabs handling narration and voice work and CapCut/Premiere Pro doing final assembly. The part that actually makes this repeatable is a strict prompting standard: every AI generation prompt has to be fully self-contained and explicit, so scenes stay visually consistent across dozens of separate generations instead of drifting.",
     stack: ["Veo 3.1 Fast", "ElevenLabs", "Google Flow", "HiggsField", "KlingAI", "Suno AI", "CapCut / Premiere Pro"],
     link: null,
     linkLabel: null,
@@ -36,12 +36,12 @@ const PROJECTS = [
     status: "case",
     statusLabel: "Case study",
     summary: "A web-based system that automates HR recruitment processes for EMB-CAR, from application to final scoring.",
-    detail: "A web-based solution that automates HR processes for handling applications. Streamlines applicant registration, auto-generates ratings from personal information, enables panelists to rate applicants online during interviews, and automatically calculates overall scores. Also generates required forms post-deliberation, improving efficiency, accuracy, and transparency in recruitment. Built for internal EMB-CAR use — restricted access, so this is presented as a case study.",
+    detail: "Government HR recruitment used to run on manual scoring and paper forms — this system replaces that end to end. Applicants register online, and the system auto-generates baseline ratings straight from their submitted information. During interviews, panelists score candidates live through the platform instead of on paper, and overall scores calculate automatically the moment scoring closes, removing manual tallying and the errors that come with it. Once deliberation wraps up, the required post-deliberation forms generate automatically. Net effect: faster turnaround, fewer scoring disputes, and a paper trail that holds up to scrutiny.",
     stack: ["PHP", "MySQL", "JavaScript"],
     link: null,
     linkLabel: null,
-    media: null,
-    mediaLabel: "Compilation coming soon"
+    media: "https://drive.google.com/drive/folders/1W9IncSHt0bjTIIzGUp-8tC0x8nFYSvh4?usp=sharing",
+    mediaLabel: "View samples"
   },
   {
     id: "ambient-system",
@@ -49,12 +49,12 @@ const PROJECTS = [
     status: "case",
     statusLabel: "Case study",
     summary: "An online repository for EMB-CAR's regional air and water quality monitoring data.",
-    detail: "An online repository for both air and water quality monitoring data collected through EMB-CAR's air quality monitoring stations and technical staff throughout the region. The system interprets raw data into formats readable by target clients and the general public, and serves as a platform to keep people updated on air and water quality conditions across the region. Internal EMB-CAR system — restricted access, so this is presented as a case study.",
-    stack: ["PHP", "MySQL", "Data reporting"],
+    detail: "Air and water quality data comes in from monitoring stations and field technicians across the whole region — this system is where it all lands, gets interpreted, and gets made useful. Raw sensor and lab readings are converted into formats that make sense to two very different audiences at once: technical staff who need the underlying data, and the general public who just want to know if conditions in their area are safe. It doubles as a standing public information channel, keeping regional air and water quality conditions visible and current rather than buried in periodic reports.",
+    stack: ["PHP", "MySQL", "Data visualization/reporting"],
     link: null,
     linkLabel: null,
-    media: null,
-    mediaLabel: "Compilation coming soon"
+    media: "https://drive.google.com/drive/folders/1z2WWzFJj5CYusBuKfTY4EIiN9ne9RFad?usp=sharing",
+    mediaLabel: "View samples"
   },
   {
     id: "kiosk-display",
@@ -62,12 +62,12 @@ const PROJECTS = [
     status: "case",
     statusLabel: "Case study",
     summary: "An interactive touchscreen kiosk that replaced EMB-CAR's old PowerPoint-based front desk display.",
-    detail: "Designed for the front desk touchscreen kiosk, this project transitioned the previous PowerPoint-based display into a dynamic, interactive web application. Provides a modern, user-friendly interface for clients to navigate content including the organizational chart and citizen's charter. Unlike the old format, it enables real-time content updates without manually editing and re-uploading slides, reducing maintenance time and keeping displayed information accurate and up to date.",
+    detail: "The front desk display used to be a PowerPoint deck someone had to manually edit and re-upload every time something changed — the org chart, the citizen's charter, anything. This project rebuilt it as a proper interactive web application running on a front desk touchscreen kiosk. Visitors navigate content directly instead of watching a slideshow loop, and updates happen in real time from the backend, so what's on screen stays accurate without anyone re-exporting slides. Small project, but it cut a recurring manual task down to near zero.",
     stack: ["JavaScript", "HTML/CSS", "Touchscreen UI"],
     link: null,
     linkLabel: null,
-    media: null,
-    mediaLabel: "Compilation coming soon"
+    media: "https://drive.google.com/drive/folders/1LWwct_s7chOsZz9pqeKkq-BCR5nLZz9o?usp=sharing",
+    mediaLabel: "View samples"
   },
   {
     id: "alisto",
@@ -75,12 +75,12 @@ const PROJECTS = [
     status: "case",
     statusLabel: "Case study",
     summary: "A CodeIgniter 4 application with a document/image preview system, hosted on a local network.",
-    detail: "Diagnosed and fixed a broken file preview system for images and PDFs by migrating uploads from the non-web-accessible app/uploads/ directory to public/uploads/, aligning the app with CodeIgniter 4's expected web-accessible structure. Runs on a local network rather than the public internet.",
+    detail: "Inherited a broken file preview feature — images and PDFs simply wouldn't render in-browser. Root cause was a structural one: uploads were sitting in CodeIgniter 4's app/uploads/ directory, which isn't web-accessible by design. Fixed it by migrating the upload path to public/uploads/, aligning the app with how CodeIgniter 4 expects file storage to work, rather than patching around the symptom. Runs on a local network rather than the public internet.",
     stack: ["CodeIgniter 4", "PHP", "MySQL"],
     link: null,
     linkLabel: null,
-    media: null,
-    mediaLabel: "Compilation coming soon"
+    media: "https://drive.google.com/drive/folders/1W2z3CARLDsKmYfxryMN9dm-6E0HS_6VH?usp=sharing",
+    mediaLabel: "View samples"
   },
   {
     id: "landslide-km",
@@ -88,7 +88,7 @@ const PROJECTS = [
     status: "off",
     statusLabel: "Offline",
     summary: "An online repository and information dissemination platform for landslide-related materials.",
-    detail: "As Programmer (Full-Stack) at the University of the Philippines - Baguio (Dec 2022–Nov 2023), developed an online repository and information dissemination platform for landslide-related materials in support of the Landslide Knowledge and Management Project, and provided technical support during fieldwork and meetings. The live site (landslidekm.dostcar.ph) is temporarily inaccessible.",
+    detail: "Built during a full-stack programmer stint at the University of the Philippines - Baguio, in support of the Landslide Knowledge and Management Project. The goal was straightforward but valuable: get landslide-related research, reports, and historical records out of scattered files and into a searchable online repository that researchers and the public could actually use, plus supporting fieldwork and project meetings with direct technical help. The live site (landslidekm.dostcar.ph) is temporarily inaccessible.",
     stack: ["PHP", "MySQL"],
     link: null,
     linkLabel: null,
@@ -101,8 +101,8 @@ const PROJECTS = [
     status: "dev",
     statusLabel: "In development",
     summary: "A system for a talent-management client to recruit, onboard, and track the performance of TikTok LIVE streamers.",
-    detail: "Currently in the architecture and design phase. Scope covers recruitment automation, an onboarding/bootcamp flow for new streamers, ongoing performance tracking, and a competitions/points system to drive engagement.",
-    stack: ["Node.js", "React/Next.js", "MySQL"],
+    detail: "Currently in the architecture and design phase for a talent-management client. The scope is essentially a full streamer lifecycle system: automated recruitment intake, a structured onboarding/bootcamp flow for new streamers, ongoing performance tracking once they're live, and a competitions/points system designed to keep engagement up over time.",
+    stack: ["Node.js", "React/Next.js", "MongoDB", "MySQL"],
     link: null,
     linkLabel: null,
     media: null,
