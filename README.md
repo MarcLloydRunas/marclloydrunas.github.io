@@ -1,36 +1,36 @@
-# Marc Lloyd — Portfolio
+# Marc Lloyd Runas — Portfolio
 
-Static multi-page portfolio site (Home, Projects, About, Contact). No build step — plain HTML/CSS/JS, so it deploys straight to GitHub Pages for free.
+Static multi-page portfolio site (Home, Projects, About, Contact). No build step — plain HTML/CSS/JS, deploys straight to GitHub Pages for free.
 
-## How to deploy on GitHub Pages
+Live links wired in: TX Distressed Home Buyers (live site), LinkedIn, Upwork, Contra. The animated-shorts project links to a Google Drive samples folder. Internal/offline systems (EMB-CAR, ALISTO, Landslide KM, TikTok LIVE platform) show "Compilation coming soon" until you add a media link.
 
-1. Create a new GitHub repo (e.g. `marc-lloyd-portfolio`, or `yourusername.github.io` if you want it at the root of your GitHub domain).
-2. Push all files in this folder to the repo:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git push -u origin main
-   ```
-3. On GitHub: go to the repo → **Settings** → **Pages**.
-4. Under "Build and deployment", set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`. Save.
-5. Wait 1–2 minutes. Your site will be live at:
-   - `https://YOUR_USERNAME.github.io/YOUR_REPO/` (normal repo), or
-   - `https://YOUR_USERNAME.github.io/` (if the repo is named `YOUR_USERNAME.github.io`)
+## Adding a media compilation link later
 
-## Before you go live — things to fill in
+Open `assets/js/projects-data.js` and find the project's entry. Set:
+```js
+media: "https://your-drive-or-youtube-link",
+mediaLabel: "View samples"
+```
+It'll automatically render as a button on both the Home and Projects pages — no HTML editing needed.
 
-- **contact.html** — replace `your-email@example.com` (appears twice) and add real links for OnlineJobs.ph, Contra, and GitHub where it currently says "Add link".
-- **assets/js/projects-data.js** — this is the single source of truth for every project card (used on both Home and Projects pages). Edit an entry's `status` field to update its badge:
-  - `"live"` — green, has a public link
-  - `"dev"` — amber, in progress
-  - `"case"` — blue, case study / no public link
-  - `"off"` — red, temporarily offline
-- **Landslide KM project** — currently marked `"off"` since the live site is inaccessible. When you have screenshots/video ready, you can either add an image gallery to that card or link out to a hosted video (YouTube/Loom) by adding a `link` and `linkLabel` to its entry in `projects-data.js`.
-- Optional: `assets/img/` is empty and ready for screenshots — add project images and reference them in `projects-data.js` if you want visual cards instead of text-only.
+## Editing this repo from a tablet/phone browser (github.dev)
 
-## Adding a new project later
+1. Open your repo on github.com, then press `.` on your keyboard (or change `github.com` to `github.dev` in the URL) to open the built-in browser editor.
+2. Edit files directly, folders included — no drag-and-drop needed.
+3. Use the **Source Control** icon in the sidebar to commit, then **Sync Changes** / **Push** to send it to GitHub.
+4. Confirm **Settings → Pages** is still set to deploy from `main` / root.
 
-Add a new object to the `PROJECTS` array in `assets/js/projects-data.js` — it will automatically appear on the Projects page and (if it's in the first 3) the Home page. No HTML editing needed.
+## Structure
+
+```
+portfolio/
+├── index.html
+├── projects.html
+├── about.html
+├── contact.html
+├── README.md
+└── assets/
+    ├── css/  (style.css, home.css, projects.css, about.css, contact.css)
+    ├── js/   (main.js, projects-data.js)
+    └── img/  (empty — add project screenshots here if you want image cards later)
+```
