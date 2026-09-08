@@ -17,9 +17,17 @@ if (navtoggle && navlinks) {
 
 // ---- Project card builder ----
 function projectCard(p, expanded) {
-  const linkHtml = p.link
-    ? `<a href="${p.link}" target="_blank" rel="noopener" class="btn card-link">${p.linkLabel} ↗</a>`
-    : `<span class="card-link-disabled">${p.status === 'off' ? 'Link temporarily unavailable' : 'Private / internal project'}</span>`;
+  const buttons = [];
+
+  if (p.link) {
+    buttons.push(`<a href="${p.link}" target="_blank" rel="noopener" class="btn primary card-link">${p.linkLabel} ↗</a>`);
+  }
+  if (p.media) {
+    buttons.push(`<a href="${p.media}" target="_blank" rel="noopener" class="btn card-link">${p.mediaLabel} ↗</a>`);
+  }
+  if (!p.link && !p.media) {
+    buttons.push(`<span class="card-link-disabled">${p.mediaLabel || 'Private / internal project'}</span>`);
+  }
 
   return `
     <article class="panel card">
@@ -34,7 +42,7 @@ function projectCard(p, expanded) {
         <div class="stacktags">
           ${p.stack.map(s => `<span class="stacktag">${s}</span>`).join('')}
         </div>
-        <div class="card-footer">${linkHtml}</div>
+        <div class="card-footer">${buttons.join(' ')}</div>
       </div>
     </article>
   `;
