@@ -1,87 +1,36 @@
 .hero{ padding: 56px 0 24px; }
-
 .bootpanel{ overflow: hidden; }
 .boot-body{ padding: 32px 28px 36px; }
 
-.boot-line{
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--text-faint);
-  margin-bottom: 14px;
-}
+.boot-line{ font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); margin-bottom: 14px; }
 .boot-line .prompt{ color: var(--accent); margin-right: 6px; }
 
 .bootpanel h1{
   font-family: var(--font-mono);
-  font-size: clamp(36px, 6vw, 56px);
+  font-size: clamp(32px, 5.5vw, 52px);
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--text);
   line-height: 1.05;
 }
-.bootpanel h1::after{
-  content: '_';
-  color: var(--accent);
-  animation: blink 1.1s steps(1) infinite;
-}
+.bootpanel h1::after{ content: '_'; color: var(--accent); animation: blink 1.1s steps(1) infinite; }
 @keyframes blink{ 0%,49%{ opacity:1; } 50%,100%{ opacity:0; } }
 
-.role{
-  font-size: 17px;
-  color: var(--text-muted);
-  margin-top: 10px;
-}
+.role{ font-size: 16.5px; color: var(--text-muted); margin-top: 10px; max-width: 56ch; }
 
-.readout{
-  margin-top: 28px;
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.readout{ margin-top: 28px; border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
 .readout .row{ display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
-.readout .k{
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-faint);
-  letter-spacing: 0.08em;
-  width: 70px;
-  flex-shrink: 0;
-}
+.readout .k{ font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); letter-spacing: 0.08em; width: 70px; flex-shrink: 0; }
 .readout .v{ font-size: 14.5px; color: var(--text); }
 
 .hero-actions{ display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+.hero-note{ font-family: var(--font-mono); font-size: 12.5px; color: var(--text-faint); margin-top: 18px; max-width: 62ch; }
 
-.hero-note{
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  color: var(--text-faint);
-  margin-top: 18px;
-  max-width: 62ch;
-}
+.grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
 
-/* ---- featured project grid (shared card styles in projects.css) ---- */
-.grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 18px;
-}
-
-/* ---- stack section ---- */
 .stack-section{ padding-top: 0; }
-.stack-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.stack-group{
-  padding: 20px 22px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
+.stack-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.stack-group{ padding: 20px 22px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .stack-group:nth-child(3n){ border-right: none; }
 .stack-group p{ margin-top: 8px; font-size: 14.5px; color: var(--text); }
-
-@media (max-width: 720px){
-  .stack-group{ border-right: none; }
-}
+@media (max-width: 720px){ .stack-group{ border-right: none; } }

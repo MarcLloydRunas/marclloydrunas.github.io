@@ -1,15 +1,14 @@
 /* =========================================================
-   MARC LLOYD — PORTFOLIO
+   MARC LLOYD RUNAS — PORTFOLIO
    Design concept: full-stack developer whose real work is
-   building monitoring/tracking systems (air & water quality,
-   ICT equipment, streamer performance). The site borrows the
-   visual language of an ops dashboard — status pills, log-style
-   headers, panel modules — because that's the actual world
-   this work comes from, not a decorative skin.
+   building monitoring/tracking systems (payroll automation,
+   network security, DB administration) plus AI-assisted
+   multimedia production. The site borrows the visual language
+   of an ops dashboard — status pills, log-style headers, panel
+   modules — because that's the actual world this work comes from.
    ========================================================= */
 
 :root{
-  /* ---- color tokens ---- */
   --bg:            #0A121C;
   --bg-raised:     #0E1826;
   --panel:         #121F2E;
@@ -21,24 +20,21 @@
   --text-muted:    #90A4B8;
   --text-faint:    #5C7086;
 
-  --accent:        #4FE3C1;   /* cyan-teal — primary signal */
+  --accent:        #4FE3C1;
   --accent-dim:    #2A6B5E;
-  --status-live:   #3DDC84;   /* green  */
-  --status-dev:    #F5A623;   /* amber  */
-  --status-case:   #6EA8FE;   /* blue   */
-  --status-off:    #F2545B;   /* red    */
+  --status-live:   #3DDC84;
+  --status-dev:    #F5A623;
+  --status-case:   #6EA8FE;
+  --status-off:    #F2545B;
 
-  /* ---- type ---- */
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
   --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
 
-  /* ---- layout ---- */
   --maxw: 1120px;
   --radius: 3px;
 }
 
 *{ box-sizing: border-box; margin: 0; padding: 0; }
-
 html{ scroll-behavior: smooth; }
 
 body{
@@ -60,10 +56,8 @@ body{
 }
 
 a{ color: inherit; text-decoration: none; }
-
 .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 
-/* ---- monospace label / eyebrow ---- */
 .tag{
   font-family: var(--font-mono);
   font-size: 12px;
@@ -72,9 +66,7 @@ a{ color: inherit; text-decoration: none; }
   color: var(--text-faint);
 }
 
-/* =========================================================
-   NAV — system title bar
-   ========================================================= */
+/* ---- nav ---- */
 .topbar{
   border-bottom: 1px solid var(--border);
   background: rgba(10,18,28,0.85);
@@ -83,12 +75,7 @@ a{ color: inherit; text-decoration: none; }
   top: 0;
   z-index: 50;
 }
-.topbar .wrap{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
+.topbar .wrap{ display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .brand{
   font-family: var(--font-mono);
   font-size: 15px;
@@ -116,10 +103,7 @@ a{ color: inherit; text-decoration: none; }
 }
 .navlinks a:hover{ color: var(--text); background: var(--panel-hover); }
 .navlinks a.active{ color: var(--accent); }
-.navlinks a:focus-visible, a:focus-visible, button:focus-visible{
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
+a:focus-visible, button:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 .navtoggle{ display: none; }
 
 @media (max-width: 720px){
@@ -139,14 +123,8 @@ a{ color: inherit; text-decoration: none; }
   }
 }
 
-/* =========================================================
-   PANEL — the recurring module unit (used everywhere)
-   ========================================================= */
-.panel{
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
+/* ---- panel module ---- */
+.panel{ background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); }
 .panel-head{
   display: flex; align-items: center; justify-content: space-between;
   padding: 12px 18px;
@@ -158,13 +136,9 @@ a{ color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 .panel-head .dots{ display: flex; gap: 5px; }
-.panel-head .dots span{
-  width: 6px; height: 6px; border-radius: 50%; background: var(--border-bright);
-}
+.panel-head .dots span{ width: 6px; height: 6px; border-radius: 50%; background: var(--border-bright); }
 
-/* =========================================================
-   STATUS PILL — signature element, reused for project state
-   ========================================================= */
+/* ---- status pill ---- */
 .status{
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-mono);
@@ -176,10 +150,7 @@ a{ color: inherit; text-decoration: none; }
   border: 1px solid var(--border-bright);
   white-space: nowrap;
 }
-.status::before{
-  content: ''; width: 6px; height: 6px; border-radius: 50%;
-  flex-shrink: 0;
-}
+.status::before{ content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 .status.live{ color: var(--status-live); }
 .status.live::before{ background: var(--status-live); box-shadow: 0 0 6px var(--status-live); }
 .status.dev{ color: var(--status-dev); }
@@ -188,14 +159,9 @@ a{ color: inherit; text-decoration: none; }
 .status.case::before{ background: var(--status-case); }
 .status.off{ color: var(--status-off); }
 .status.off::before{ background: var(--status-off); }
+@keyframes pulse{ 0%,100%{ opacity: 1; } 50%{ opacity: 0.35; } }
 
-@keyframes pulse{
-  0%,100%{ opacity: 1; } 50%{ opacity: 0.35; }
-}
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
+/* ---- buttons ---- */
 .btn{
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--font-mono);
@@ -209,15 +175,9 @@ a{ color: inherit; text-decoration: none; }
 .btn:hover{ border-color: var(--accent); background: rgba(79,227,193,0.06); }
 .btn.primary{ background: var(--accent); border-color: var(--accent); color: #06201A; font-weight: 600; }
 .btn.primary:hover{ background: #6BEBD1; transform: translateY(-1px); }
+.btn.ghost{ border-style: dashed; color: var(--text-muted); }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-footer{
-  border-top: 1px solid var(--border);
-  margin-top: 100px;
-  padding: 28px 0;
-}
+footer{ border-top: 1px solid var(--border); margin-top: 100px; padding: 28px 0; }
 footer .wrap{
   display: flex; justify-content: space-between; align-items: center;
   font-family: var(--font-mono); font-size: 12px; color: var(--text-faint);
@@ -226,18 +186,11 @@ footer .wrap{
 footer a{ color: var(--text-muted); }
 footer a:hover{ color: var(--accent); }
 
-/* =========================================================
-   UTILITY
-   ========================================================= */
 .section{ padding: 64px 0; }
 .section-head{ margin-bottom: 32px; }
 .section-head h2{
-  font-family: var(--font-mono);
-  font-size: 22px;
-  color: var(--text);
+  font-family: var(--font-mono); font-size: 22px; color: var(--text);
   display: flex; align-items: center; gap: 12px;
 }
-.section-head h2::before{
-  content: ''; width: 18px; height: 2px; background: var(--accent);
-}
+.section-head h2::before{ content: ''; width: 18px; height: 2px; background: var(--accent); }
 .section-head p{ color: var(--text-muted); margin-top: 8px; max-width: 60ch; }
