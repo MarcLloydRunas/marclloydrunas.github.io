@@ -28,7 +28,7 @@
 .timeline{ display: flex; flex-direction: column; }
 .timeline-item{
   display: grid; grid-template-columns: 160px 1fr; gap: 24px;
-  padding: 22px 0; border-bottom: 1px solid var(--border);
+  padding: 22px 24px; border-bottom: 1px solid var(--border);
 }
 .timeline-item:last-child{ border-bottom: none; }
 .timeline-period{
