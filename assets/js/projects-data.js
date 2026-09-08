@@ -18,13 +18,52 @@ const PROJECTS = [
     mediaLabel: null
   },
   {
-    id: "emb-systems",
-    name: "EMB-CAR Internal Systems",
+    id: "animated-shorts",
+    name: "AI-Generated Animated Shorts",
+    status: "case",
+    statusLabel: "Ongoing",
+    summary: "Pixar-style 3D animated short films produced end-to-end with AI generation tools.",
+    detail: "Independently produce short-form, Pixar-style 3D animated videos, managing each project from concept through final edit. Designed and manage an end-to-end AI-generation production pipeline: character/asset reference images, per-shot start frames, and final video clips generated with Veo 3.1 Fast. Produce narration and voice work with ElevenLabs, and handle final assembly and editing. Established a production standard requiring fully self-contained, explicit AI generation prompts for consistent, reliable output across scenes.",
+    stack: ["Veo 3.1 Fast", "ElevenLabs", "Google Flow", "HiggsField", "KlingAI", "Suno AI", "CapCut / Premiere Pro"],
+    link: null,
+    linkLabel: null,
+    media: "https://drive.google.com/drive/folders/1WzqNTaqGJisOVQrzDrSJN_Ky84SrwstO?usp=sharing",
+    mediaLabel: "View samples"
+  },
+  {
+    id: "rsps",
+    name: "RSPS — Recruitment, Selection & Placement System",
     status: "case",
     statusLabel: "Case study",
-    summary: "Standalone and web-based systems built for the Environmental Management Bureau - CAR, including payroll automation.",
-    detail: "As System Management and Development Programmer at Environmental Management Bureau - CAR (Jan 2023–Present), I develop standalone applications and web-based systems supporting agency operations, including an automated payroll generation system. I also administer databases across multiple departments, manage LAN network security and access control, provide technical support and troubleshooting agency-wide, and operate drones (UAVs) for aerial fieldwork data collection. Internal government systems — restricted access, so this is presented as a case study.",
-    stack: ["PHP", "MySQL", "JavaScript", "Network Security", "DB Administration"],
+    summary: "A web-based system that automates HR recruitment processes for EMB-CAR, from application to final scoring.",
+    detail: "A web-based solution that automates HR processes for handling applications. Streamlines applicant registration, auto-generates ratings from personal information, enables panelists to rate applicants online during interviews, and automatically calculates overall scores. Also generates required forms post-deliberation, improving efficiency, accuracy, and transparency in recruitment. Built for internal EMB-CAR use — restricted access, so this is presented as a case study.",
+    stack: ["PHP", "MySQL", "JavaScript"],
+    link: null,
+    linkLabel: null,
+    media: null,
+    mediaLabel: "Compilation coming soon"
+  },
+  {
+    id: "ambient-system",
+    name: "Ambient System — Air & Water Quality Monitoring",
+    status: "case",
+    statusLabel: "Case study",
+    summary: "An online repository for EMB-CAR's regional air and water quality monitoring data.",
+    detail: "An online repository for both air and water quality monitoring data collected through EMB-CAR's air quality monitoring stations and technical staff throughout the region. The system interprets raw data into formats readable by target clients and the general public, and serves as a platform to keep people updated on air and water quality conditions across the region. Internal EMB-CAR system — restricted access, so this is presented as a case study.",
+    stack: ["PHP", "MySQL", "Data reporting"],
+    link: null,
+    linkLabel: null,
+    media: null,
+    mediaLabel: "Compilation coming soon"
+  },
+  {
+    id: "kiosk-display",
+    name: "Web-Based Front Desk Kiosk",
+    status: "case",
+    statusLabel: "Case study",
+    summary: "An interactive touchscreen kiosk that replaced EMB-CAR's old PowerPoint-based front desk display.",
+    detail: "Designed for the front desk touchscreen kiosk, this project transitioned the previous PowerPoint-based display into a dynamic, interactive web application. Provides a modern, user-friendly interface for clients to navigate content including the organizational chart and citizen's charter. Unlike the old format, it enables real-time content updates without manually editing and re-uploading slides, reducing maintenance time and keeping displayed information accurate and up to date.",
+    stack: ["JavaScript", "HTML/CSS", "Touchscreen UI"],
     link: null,
     linkLabel: null,
     media: null,
@@ -68,18 +107,5 @@ const PROJECTS = [
     linkLabel: null,
     media: null,
     mediaLabel: "Compilation coming soon"
-  },
-  {
-    id: "animated-shorts",
-    name: "AI-Generated Animated Shorts",
-    status: "case",
-    statusLabel: "Ongoing",
-    summary: "Pixar-style 3D animated short films produced end-to-end with AI generation tools.",
-    detail: "Independently produce short-form, Pixar-style 3D animated videos, managing each project from concept through final edit. Designed and manage an end-to-end AI-generation production pipeline: character/asset reference images, per-shot start frames, and final video clips generated with Veo 3.1 Fast. Produce narration and voice work with ElevenLabs, and handle final assembly and editing. Established a production standard requiring fully self-contained, explicit AI generation prompts for consistent, reliable output across scenes.",
-    stack: ["Veo 3.1 Fast", "ElevenLabs", "Google Flow", "HiggsField", "KlingAI", "Suno AI", "CapCut / Premiere Pro"],
-    link: null,
-    linkLabel: null,
-    media: "https://drive.google.com/drive/folders/1WzqNTaqGJisOVQrzDrSJN_Ky84SrwstO?usp=sharing",
-    mediaLabel: "View samples"
   }
 ];
